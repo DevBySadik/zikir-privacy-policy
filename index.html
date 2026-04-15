@@ -1,45 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - DevBySadik</title>
+    <title>Privacy Policy | DevBySadik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; color: #333; }
-        .lang-section { border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { color: #2c3e50; }
-        h2 { color: #2980b9; }
-        .contact { background: #f4f4f4; padding: 15px; border-radius: 5px; }
+        :root { --primary: #064e3b; --accent: #b45309; --bg: #f9fafb; --text: #1f2937; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        header { background: var(--primary); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .container { max-width: 900px; margin: -30px auto 50px; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .lang-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .lang-btn { padding: 8px 15px; border: 1px solid var(--primary); background: white; color: var(--primary); cursor: pointer; border-radius: 20px; font-weight: 600; transition: 0.3s; }
+        .lang-btn:hover, .lang-btn.active { background: var(--primary); color: white; }
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        h2 { color: var(--primary); border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 30px; }
+        .contact-card { background: #f0fdf4; border: 1px solid #dcfce7; padding: 25px; border-radius: 10px; margin-top: 40px; }
+        .contact-card strong { color: var(--accent); }
+        .rtl { direction: rtl; font-family: sans-serif; }
     </style>
 </head>
 <body>
 
-    <div class="lang-section">
-        <h1>Privacy Policy</h1>
-        <p><strong>Last Updated:</strong> April 15, 2026</p>
-        <p>This Privacy Policy applies to the <strong>Zikir ve Dua</strong> app developed by <strong>DevBySadik</strong>. Our app supports multiple languages including Turkish, Arabic, English, German, Dutch, Spanish, and Indonesian.</p>
-        
-        <h2>1. Data Collection</h2>
-        <p>Our app uses Firebase Authentication (Google Sign-In). We only process your name and email address for account management. No other personal data is collected or shared.</p>
-        
-        <h2>2. Permissions</h2>
-        <p>Location permission is used solely for features like Qibla direction or prayer times and is processed temporarily on your device.</p>
+<header>
+    <h1>Zikir ve Dua</h1>
+    <p>Privacy Policy & Data Safety</p>
+</header>
 
-        <div class="contact">
-            <p><strong>Contact & Data Deletion:</strong> To delete your account and data, email us at: <strong>sadiksiyak@gmail.com</strong></p>
+<div class="container">
+    <div class="lang-nav">
+        <button class="lang-btn active" onclick="showLang('tr')">Türkçe</button>
+        <button class="lang-btn" onclick="showLang('en')">English</button>
+        <button class="lang-btn" onclick="showLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="showLang('de')">Deutsch</button>
+        <button class="lang-btn" onclick="showLang('nl')">Nederlands</button>
+        <button class="lang-btn" onclick="showLang('es')">Español</button>
+        <button class="lang-btn" onclick="showLang('id')">Indonesia</button>
+    </div>
+
+    <div id="tr" class="content-section active">
+        <h2>Gizlilik Politikası</h2>
+        <p>DevBySadik tarafından geliştirilen "Zikir ve Dua" uygulaması, kullanıcı gizliliğine en üst düzeyde önem vermektedir.</p>
+        <h3>1. Veri Toplama ve Kullanım</h3>
+        <p>Uygulamamız Google ile Giriş (Firebase) sistemini kullanır. Bu kapsamda sadece adınız ve e-posta adresiniz hesap yönetimi için toplanır.</p>
+        <h3>2. Konum Bilgileri</h3>
+        <p>Kıble yönü ve namaz vakitlerinin hesaplanması için yaklaşık konum veriniz geçici olarak işlenir, sunucularımızda saklanmaz.</p>
+        <div class="contact-card">
+            <h3>İletişim ve Veri Silme</h3>
+            <p>Hesabınızın veya verilerinizin kalıcı olarak silinmesini talep etmek için <strong>sadiksiyak@gmail.com</strong> adresine mail atabilirsiniz. Talebiniz 24 saat içinde işleme alınacaktır.</p>
         </div>
     </div>
 
-    <div class="lang-section">
-        <h1>Gizlilik Politikası</h1>
-        <p><strong>Son Güncelleme:</strong> 15 Nisan 2026</p>
-        <p>Bu politika, <strong>DevBySadik</strong> tarafından geliştirilen <strong>Zikir ve Dua</strong> uygulaması için geçerlidir.</p>
-        <h2>1. Veri Toplama</h2>
-        <p>Uygulamamız Google ile Giriş sistemini kullanır. Sadece isim ve e-posta adresiniz hesap yönetimi için işlenir.</p>
-        <div class="contact">
-            <p><strong>İletişim ve Veri Silme:</strong> sadiksiyak@gmail.com</p>
+    <div id="en" class="content-section">
+        <h2>Privacy Policy</h2>
+        <p>The "Zikir ve Dua" app developed by DevBySadik prioritizes user privacy at the highest level.</p>
+        <h3>1. Data Collection</h3>
+        <p>We use Google Sign-In (Firebase). Only your name and email are collected for account management purposes.</p>
+        <div class="contact-card">
+            <h3>Contact & Data Deletion</h3>
+            <p>To request the permanent deletion of your account and data, contact us at: <strong>sadiksiyak@gmail.com</strong></p>
         </div>
     </div>
+
+    <div id="ar" class="content-section rtl">
+        <h2>سياسة الخصوصية</h2>
+        <p>تطبيق "Zikir ve Dua" الذي طورته شركة DevBySadik يعطي الأولوية لخصوصية المستخدم.</p>
+        <h3>1. جمع البيانات</h3>
+        <p>نستخدم تسجيل الدخول عبر Google. يتم جمع اسمك وبريدك الإلكتروني فقط لإدارة الحساب.</p>
+        <div class="contact-card">
+            <h3>الاتصال وحذف البيانات</h3>
+            <p>لطلب حذف حسابك وبياناتك نهائيًا، اتصل بنا على: <strong>sadiksiyak@gmail.com</strong></p>
+        </div>
+    </div>
+
+    <div id="de" class="content-section"><h2>Datenschutzerklärung</h2><p>Kontakt für datenlöschung: <strong>sadiksiyak@gmail.com</strong></p></div>
+    <div id="nl" class="content-section"><h2>Privacybeleid</h2><p>Contact voor gegevensverwijdering: <strong>sadiksiyak@gmail.com</strong></p></div>
+    <div id="es" class="content-section"><h2>Política de Privacidad</h2><p>Contacto para eliminación de datos: <strong>sadiksiyak@gmail.com</strong></p></div>
+    <div id="id" class="content-section"><h2>Kebijakan Privasi</h2><p>Kontak untuk penghapusan data: <strong>sadiksiyak@gmail.com</strong></p></div>
+
+</div>
+
+<script>
+    function showLang(lang) {
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(lang).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
 
 </body>
 </html>
